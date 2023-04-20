@@ -1,19 +1,20 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: "apps/v1"
+kind: "Deployment"
 metadata:
-  name: minigpt_deployment
+  name: "mini-gpt"
+  namespace: "default"
+  labels:
+    app: "mini-gpt"
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: mini_gpt
+      app: "mini-gpt"
   template:
     metadata:
       labels:
-        app: mini_gpt
+        app: "mini-gpt"
     spec:
       containers:
-      - name: mini_gpt
-        image: mini_gpt
-        ports:
-        - containerPort: 8501
+      - name: "nginx-1"
+        image: "nginx:latest"
