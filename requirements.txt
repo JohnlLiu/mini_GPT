@@ -1,0 +1,6 @@
+torch --index-url https://download.pytorch.org/whl/cpu
+streamlit
+streamlit-chat
+numpy
+
+#Run this file with - pip3 install -r requirements.txt

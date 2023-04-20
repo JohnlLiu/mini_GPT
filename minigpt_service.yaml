@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mini_gpt
+spec:
+  type: LoadBalancer
+  selector:
+    app: mini_gpt
+  ports:
+  - port: 80
+    targetPort: 8501

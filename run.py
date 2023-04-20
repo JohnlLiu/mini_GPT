@@ -11,10 +11,10 @@ saved_model.load_state_dict(torch.load('GPT_model.pt'))
 new_tokens = 500
 
 
-def chat_bot(input):
+def chat_bot(input, tokens):
     text = input
     context = torch.tensor([encode(text)], dtype = torch.long)
-    response = decode(saved_model.generate(context, max_new_tokens = new_tokens)[0].tolist())
+    response = decode(saved_model.generate(context, max_new_tokens = tokens)[0].tolist())
 
     return response
 

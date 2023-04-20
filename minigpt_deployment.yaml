@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minigpt_deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mini_gpt
+  template:
+    metadata:
+      labels:
+        app: mini_gpt
+    spec:
+      containers:
+      - name: mini_gpt
+        image: mini_gpt
+        ports:
+        - containerPort: 8501
