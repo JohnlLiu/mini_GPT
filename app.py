@@ -57,7 +57,7 @@ if st.session_state['generated']:
 
 
 
-
+#trigger test
 
 # def get_text():
 #     input_text = st.text_input("You: ","Enter in a short prompt", key="input")
