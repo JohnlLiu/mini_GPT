@@ -16,5 +16,5 @@ steps:
   args:
   - run
   - --filename=K8s/
-  - --location=us-central1
-  - --cluster=minigpt1cluster-1
+  - --location=us-central1-c
+  - --cluster=minigptcluster-1

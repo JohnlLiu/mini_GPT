@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mini-gpt
+  namespace: default
+  labels:
+    app: mini-gpt
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mini-gpt
+  template:
+    metadata:
+      labels:
+        app: mini-gpt
+    spec:
+      containers:
+      - name: gpt-app
+        image: gcr.io/mini-gpt-384322/myapp:v1
+        ports:
+        - containerPort: 8501
