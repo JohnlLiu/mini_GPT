@@ -14,3 +14,5 @@ https://medium.com/@j0hn.l/mlops-end-to-end-mini-gpt-77b66d601015
 **At the moment, the link to website has been taken down. Instead to use, clone repo and build the container**
 
 Run requirements.txt file to install all depenencies: `pip3 install -r requirements.txt`
+
+To run app `streamlit run app.y` in main directory.
